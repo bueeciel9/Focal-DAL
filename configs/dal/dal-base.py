@@ -331,8 +331,7 @@ test_pipeline = [
                 scale_ratio_range=[1., 1.],
                 translation_std=[0, 0, 0]),
             dict(type='RandomFlip3D'),
-            dict(
-                type='PointsRangeFilter', point_cloud_range=point_cloud_range),
+            # dict(CBGSDatasetrange),
             dict(
                 type='DefaultFormatBundle3D',
                 class_names=class_names,
@@ -349,10 +348,10 @@ input_modality = dict(
     use_external=False)
 
 data = dict(
-    samples_per_gpu=4,  # for 16 GPU
-    workers_per_gpu=6,
+    samples_per_gpu=6,  # for 16 GPU  I Think it's the batch_size
+    workers_per_gpu=8,   # It used to be 6
     train=dict(
-        type='CBGSDataset',
+        type='CBGSDataset',  
         dataset=dict(
             type=dataset_type,
             data_root=data_root,

@@ -1,3 +1,14 @@
+# My note
+- Install pip install numpy==1.23.5
+- Install pip install spconv-cu117
+- Install pip install yapf==0.40.1
+- Install pip install setuptools==59.5.0
+
+Error list
+AttributeError: module 'distutils' has no attribute 'version'
+-> https://github.com/pytorch/pytorch/issues/69894
+
+
 # BEVDet
 
 
@@ -158,7 +169,7 @@ If this work is helpful for your research, please consider citing the following 
 ```
 @article{huang2023dal,
   title={Detecting As Labeling: Rethinking LiDAR-camera Fusion in 3D Object Detection},
-  author={Huang, Junjie and Ye, Yun and Liang, Zhujin and Shan, Yi and Du, Dalong},
+  author={Huang, Junjie and Ye, Yun and Liang, Zhujin and Shan, Yi and Huang, Guan},
   journal={arXiv preprint arXiv:2311.07152},
   year={2023}
 }
@@ -184,4 +195,3 @@ If this work is helpful for your research, please consider citing the following 
   year={2021}
 }
 ```
-# Focal-DAL

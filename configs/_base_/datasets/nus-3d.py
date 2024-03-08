@@ -105,7 +105,7 @@ eval_pipeline = [
 
 data = dict(
     samples_per_gpu=4,
-    workers_per_gpu=4,
+    workers_per_gpu=4, #It used to be 4
     train=dict(
         type=dataset_type,
         data_root=data_root,
@@ -139,4 +139,4 @@ data = dict(
 # Since the models are trained by 24 epochs by default, we set evaluation
 # interval to be 24. Please change the interval accordingly if you do not
 # use a default schedule.
-evaluation = dict(interval=24, pipeline=eval_pipeline)
+evaluation = dict(interval=2, pipeline=eval_pipeline)
